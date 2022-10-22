@@ -3,12 +3,16 @@
  */
 package TestCoppeliaCST;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import co.nstant.in.cbor.CborException;
+import java.io.IOException;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App {
+
+    public static void main(String[] args) throws CborException, IOException {
+        Environment env = new Environment();
+        env.startSimulation();
+        System.out.println(env.getAgentPosition());
+        System.out.println(env.getApplesInVision());
+        env.stopSimulation();
     }
 }
