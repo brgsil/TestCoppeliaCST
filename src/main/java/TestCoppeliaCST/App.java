@@ -13,6 +13,14 @@ public class App {
         env.startSimulation();
         System.out.println(env.getAgentPosition());
         System.out.println(env.getApplesInVision());
+        env.moveTo(1, 1);
+        env.waitSim(5);
+        env.moveTo(-1, 1);
+        env.waitSim(5);
+        env.moveTo(1, -1);
+        env.waitSim(5);
+        env.moveTo(0, 0);
+        env.waitSim(5);
         env.stopSimulation();
     }
 }
